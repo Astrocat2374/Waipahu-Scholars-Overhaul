@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+</head>
+<body>
+    <form id='register-form'>
+        <label for='email-input'>Email:</label><br>
+        <input id='email' type='text' name='email-input' required>
+        <br>
+        <br>
+        <label for='password-input'>Password:</label><br>
+        <input id='password' type='password' name='password-input' required>
+        <br>
+        <br>
+        <label for='gpa-input'>GPA:</label><br>
+        <input id='gpa' type='number' min='1' max='4' name='gpa-input' required>
+        <br>
+        <br>
+        <input id='submit-button' type='submit'>
+    </form>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script>
+        let config = {
+            apiKey: "AIzaSyAYywBHNG8IkI7quZyJwl6MMS2uQtmMv9U",
+            authDomain: "waipahu-scholars-overhaul.firebaseapp.com",
+            databaseURL: "https://waipahu-scholars-overhaul.firebaseio.com",
+            projectId: "waipahu-scholars-overhaul",
+            storageBucket: "waipahu-scholars-overhaul.appspot.com",
+            messagingSenderId: "539290442734",
+            appId: "1:539290442734:web:b7041a1265ca0b62"
+        };
+        firebase.initializeApp(config);
+        const auth = firebase.auth();
+        const database = firebase.firestore();
+    </script>
+    <script src="../javascript/register.js"></script>
+</body>
+</html>
