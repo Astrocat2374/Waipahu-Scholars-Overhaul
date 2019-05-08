@@ -1,6 +1,6 @@
 # Waipahu High School Coding 2 Project
 WHS Coding II Capstone Project
-
+Previous Repository: https://github.com/AlohaJarren/Waipahu-Scholars
 
 ## Team Name: Scholar Squad
 
