@@ -10,6 +10,14 @@ submit.addEventListener('click', function register(e){
         .createUserWithEmailAndPassword(email, password)
         .then(data => {
             database.collection('users').doc(data.user.uid).set({gpa: gpaGoal}).then(()=> console.log(gpaGoal))
+            let userRef = db.collection('users').doc(data.user.uid)
+            userRef.get().then(function(doc){
+                if (doc.exists) {
+                    console.log("Document Data: ", doc.data());
+                } else {
+                    console.log('Unregistered User!!')
+                }
+            })
         })
         .catch(err => {
             console.log(err.message);
