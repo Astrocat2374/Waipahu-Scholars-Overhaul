@@ -9,15 +9,7 @@ submit.addEventListener('click', function register(e){
     auth
         .createUserWithEmailAndPassword(email, password)
         .then(data => {
-            database.collection('users').doc(data.user.uid).collection('goals').doc('gpa').set({gpaGoal: gpaGoal}).then(()=> console.log('Client: ', gpaGoal))
-            let userRef = database.collection('users').doc(data.user.uid).collection('goals')
-            userRef.get().then(function(doc){
-                if (doc.exists) {
-                    console.log("Document Data: ", doc.data());
-                } else {
-                    console.log('Unregistered User!!')
-                }
-            })
+            database.collection('users').doc(data.user.uid).collection('goals').doc('1').set({goalTitle: 'GPA', goal: gpaGoal}).then(()=> console.log('Client: ', gpaGoal))
         })
         .catch(err => {
             console.log(err.message);
