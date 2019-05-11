@@ -1,16 +1,6 @@
-if (user) {
-    let userRef = database.collection('users').doc(data.user.uid).collection('goals')
-    userRef.get().then(function(doc){
-        if (doc.exists) {
-            console.log("Document Data: ", doc.data());
-        } else {
-            console.log('Document Not Found!')
-        }
-    })
-} else {
-    console.log('Idiot')
-}
-
+var goal;
+var goalTitle;
+var userRef;
 const body = document.querySelector('#cardZone')
 const goalTemplate = `
     <div class = goalCard>
@@ -19,8 +9,24 @@ const goalTemplate = `
     </div>
 `
 
-for (i = 0; i < userRef.length; i++) {
-    let goalTitle = userRef.doc(string(i)).goalTitle;
-    let goal = userRef.doc(string(i)).goal;
-    body.appendChild(goalTemplate)
+
+
+function login() {
+    let userid = localStorage.getItem('userid')
+    console.log(userid)
+    if (userid) {
+        for (i = 1; i < 10; i++) {
+            console.log(i)
+            let goalTitle = database.collection('users').doc(userid).collection('goals').doc(String(i)).goalTitle;
+            let goal = database.collection('users').doc(userid).collection('goals').doc(String(i)).goal;
+            body.innerHTML = goalTemplate
+        }
+    } else {
+        console.log('No user data')
+    }
 }
+
+login()
+
+
+

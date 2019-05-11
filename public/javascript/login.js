@@ -6,7 +6,7 @@ submit.addEventListener('click', function register(e){
     auth
         .signInWithEmailAndPassword(email, password)
         .then(data => {
-            localStorage.setItem('user', data)
+            localStorage.setItem('userid', data.user.uid)
             console.log(data)
         })
 })
