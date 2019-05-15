@@ -34,5 +34,5 @@ button.addEventListener('click', function register(e) {
   });
 
   localStorage.setItem('userid', userId)
-  window.location.href = './goals.html';
+  //window.location.href = './goals.html';
 })
