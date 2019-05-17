@@ -1,12 +1,11 @@
+const database = firebase.database();
 let submit = document.querySelector('#submit-button')
 submit.addEventListener('click', function register(e){
     e.preventDefault()
     let email = document.querySelector('#email').value
     let password = document.querySelector('#password').value
-    auth
+    firebase.auth()
         .signInWithEmailAndPassword(email, password)
-        .then(data => {
-            localStorage.setItem('userid', data.user.uid)
-            console.log(data)
-        })
+    localStorage.setItem('userid', userId)
+    window.location.href = './goals.html';
 })

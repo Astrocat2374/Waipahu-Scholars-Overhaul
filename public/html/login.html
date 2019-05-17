@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 <body>
+    <ul id = 'navbar'>
+        <li><a href='index.html'>Home</a></li>
+        <li><a href='resources.html'>Resources</a></li>
+        <li><a href='login.html' class='active'>Login</a></li>
+        <li><a href='register.html'>Sign Up</a></li>
+    </ul>
     <form id='login-form'>
         <label for='email-input'>Email:</label><br>
         <input id='email' type='text' name='email-input' required>
@@ -30,8 +37,6 @@
             appId: "1:539290442734:web:b7041a1265ca0b62"
         };
         firebase.initializeApp(config);
-        const auth = firebase.auth();
-        const database = firebase.firestore();
     </script>
     <script src="../javascript/login.js"></script>
 </body>
