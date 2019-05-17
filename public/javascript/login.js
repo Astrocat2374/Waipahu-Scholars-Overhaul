@@ -6,6 +6,8 @@ submit.addEventListener('click', function register(e){
     let password = document.querySelector('#password').value
     firebase.auth()
         .signInWithEmailAndPassword(email, password)
+    var userId = firebase.auth().currentUser.uid;
+    console.log('userId', userId);
     localStorage.setItem('userid', userId)
     window.location.href = './goals.html';
 })
