@@ -286,7 +286,8 @@ input {
 	height: 10px;
 	padding-top: 10px;
 	padding-left: 20px;
-	padding-bottom: 23px;
+    padding-bottom: 23px;
+    color: white;
 }
 
 #clearBox2:hover {
