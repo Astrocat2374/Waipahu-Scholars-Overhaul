@@ -11,7 +11,11 @@ button.addEventListener('click', function register(e) {
   e.preventDefault();
   email = document.querySelector('#email').value
   password = document.querySelector('#password').value
-  question1 = document.querySelector('#gpa').value;
+  question1 = document.querySelector('#gpa').value + 1;
+  question2 = document.querySelector('#math').value + 1;
+  question3 = document.querySelector('#science').value + 1;
+  question4 = document.querySelector('#ss').value + 1;
+  question5 = document.querySelector('#english').value + 1;
 
   // Allows you to create email & Password
   firebase
@@ -29,7 +33,11 @@ button.addEventListener('click', function register(e) {
   firebase.database().ref(`users/${userId}`).set({
     userId: userId,
     email: email,
-    question1: question1
+    question1: question1,
+    question2: question2,
+    question3: question3,
+    question4: question4,
+    question5: question5
     //some more user data
   });
 

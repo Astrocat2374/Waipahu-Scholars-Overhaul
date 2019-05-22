@@ -1,21 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/styles2.css">
+	<link rel="shortcut icon" type="image/png" href="images/soundcloud.png">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<title> Scholar Squad</title>
 </head>
-</head>
+
 <body>
-    <ul id = 'navbar'>
-        <li><a href='index.html' class='active'>Home</a></li>
-        <li><a href='resources.html'>Resources</a></li>
-        <li><a href='login.html'>Login</a></li>
-        <li><a href='register.html'>Sign Up</a></li>
-    </ul>
-    <script src="../javascript/app.js"></script>
+        <ul id = 'navbar'>
+                <li><a href='index.html'>Home</a></li>
+                <li><a href='resources.html'>Resources</a></li>
+                <li><a href='login.html'>Login</a></li>
+                <li><a href='register.html'>Sign Up</a></li>
+                <li><a id='logout-button'>Logout</a></li>
+            </ul>
+	<div id="container">
+		<header>
+			<img id="topLeftLogo" src="../images/sc-topleft3.png" alt="SoundCloud top left logo in Whitish-Blue">
+			<nav id="topRight">
+				<ul>
+					<li id="clearBox1" onclick="window.location.href='login.html';">Sign in</li>
+					<li id="orangeBox1">Create account</li>
+				</ul>
+			</nav>
+			<div id="topMiddle">
+				<h1>Connect on Waipahu Scholars</h1>
+				<p> Discover, explore, and seek our tool for endless scholarship<br /> opportunities for Waipahu High School students </p>
+				<h3 class="orangeBox">Sign up for free</h3>
+			</div>
+		</header>
+
+		<div id="properMiddle">
+			<div id="textLine1">
+				<input type="text" name="search" placeholder="Search for our updated listings">
+				<p id="or"> or </p>
+				<p class="whiteBox"> Add a new listing</p>
+			</div>
+
+		</div>
+		<div id="thirdToBottom">
+			<h1> We're Here For You!</h1>
+
+			<h2> Waipahu Scholars is available on Web. Potential development on Mobile [Google Play/App Store] TBD </h2>
+			<img id="thirdToTheRight" src="../images/sc-thirdtobottomimg.png" alt="devices with SoundCloud service">
+			<img id="downloadStores" src="../images/appstoregoogleplay.png" alt="App Store and Google Play Adverts black boxes">
+		</div>
+
+		<div id="secondToTheBottom">
+			<div id="textSecondBot">
+				<h1> Calling all students</h1>
+				<h3> Get on Waipahu Scholars to connect with teachers, share your scholarship journey, and get a step ahead. What are you waiting for?</h3>
+				<p id="clearBox2"> Find out more</p>
+			</div>
+		</div>
+
+		<div id="bottomNoUp">
+			<h1> Thanks for coming. Now join in. </h1>
+			<h3> Save scholarships, check finances and seek your college plans today! All for free. </h3>
+			<h3 class="orangeBox"> Create account</h3>
+			<br />
+			<p> Already have an account?</p>
+			<p class="whiteBox"> Sign in</p>
+		</div>
+
+		<footer>
+			<p id="addInfo"> Popular searches ⁃ Directory ⁃ About us ⁃ Blog ⁃ Jobs ⁃ Developers ⁃ Help ⁃ Legal ⁃ Privacy ⁃ Cookies ⁃ Imprint</p>
+			<p id="language1"> Language: </p> 
+			<p id="language2"> English (US) </p>
+		</footer>
+
+	</div>
 </body>
 </html>
